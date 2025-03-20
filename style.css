@@ -1,0 +1,73 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #343a40;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+h2 {
+    color: #AA60C8;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ✅ Fixed Logout Button Position */
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Improved Table Design */
+.table th {
+    background: linear-gradient(135deg, #AA60C8, #D69ADE);
+    color: #ffffff;
+}
+
+.table tbody tr:nth-child(even) { background-color: #f8f9fa; }
+.table tbody tr:hover { background-color: #e9ecef; }
+
+/* ✅ Improved Button Layout */
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table thead { display: none; }
+    .table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .table tbody td { display: flex; justify-content: space-between; padding: 10px; }
+}
